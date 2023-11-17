@@ -1,0 +1,1701 @@
+ @charset "UTF-8";
+
+ @font-face { /*muito chamativo*/
+    font-family: 'destaque';
+    src: url(fonts/Nabla-Regular.ttf) format('truetype');
+    font-weight: normal;
+ }
+
+ @font-face { /*font usar no titulo do sobre*/
+    font-family: 'Logo';
+    src: url(fonts/FANTASY\ MAGIST.otf) format('opentype');
+    font-weight: bold;
+ }
+
+
+ :root{ /*variaveis*/
+    --primary: #03a9f4;
+    --secondary:#ffebee;
+    --success: #2ecc71;
+    --info: #20c997;
+    --warning: #fb6340;
+    --danger: #f5365c;
+    --light: #fefefe;
+    --dark: #343a40;
+
+    --font1: 'destaque'; /*usar com cuidado "não usar essa font."*/
+    --font2: 'Logo';
+ }
+
+*{ /*tag global*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {/*corpo e html*/
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+    scroll-behavior: smooth;
+}
+
+header{/*header em estado fixo*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--primary);
+    box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.317);
+    color: white;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+header img{ /*img da logo*/
+    width: 5%;
+    filter: drop-shadow(2px 2px 5px #5f5f5f);
+    border-radius: 10px;
+}
+
+nav{ /*largura da nav*/
+    max-width: 100%;
+}
+
+ul{ /*lsita não ordenada*/
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 3rem;
+}
+
+li a{ /*as lista junto com links*/
+    padding: 10px;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: inherit;
+    transition: .3s ease-in-out;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+li a:hover{ /*links hover*/
+    transform: scale(1.5);
+    text-decoration: underline;
+    font-size: 1.3em; 
+}
+
+ul .menu2:hover{ /*cor do icone de abrir a barra lareral*/
+    color: var(--danger);
+}
+
+#contato{ /*Buttom de contato*/
+    margin-left: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.203) 0px 6px 20px;
+}
+
+.menu{ /*icone menu invisivel até tamanho certo*/
+    display: none;
+}
+
+.menu2{ /*icones do lado de cada link do cabeçalho*/
+    position: relative;  
+    width: 30px;
+}
+
+.menu-lateral{ /*estilo do menu-lateral*/
+    background-color: #000000f1;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    width: 0%;
+    overflow: hidden;
+}
+
+.overlay{ /*shadow do menu lateral*/
+    background-color: #000000bb;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+    z-index: 8888;
+    display: none;
+} /*não esta aparecendo overlay*/
+
+.menu-mobile .nav-lateral #nav-lateral-ul{ /*nav ul li do menu lateral*/
+    display: block;
+    visibility: visible;
+    text-align: right;
+    font-size: 2em;
+    line-height: 105px;
+    opacity: 1;
+    margin-top: 50px;
+    margin-right: 15px;
+}
+
+.menu-mobile .nav-lateral #nav-lateral-ul a:hover{ /*nav ul li do menu lateral hover*/
+    background-color: var(--primary);
+    /* padding: 2% 5%; */
+    border-radius: 5px;
+    text-decoration: none;
+    text-shadow: 3px 0px 2px black;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    color: white;
+}
+
+.menu-lateral.abrir-menu{ /*codigo de clik não usavel*/
+    width: 53%;
+}
+
+.menu-lateral.abrir-menu ~ .overlay{ /*bug arrumar */
+    display: block;
+}
+
+btn-fechar >#fechar{ /*buttom fechar da barra lateral*/
+    position: relative;
+} /*fim do estilo menu-lateral*/
+
+/*fim do header*/
+
+/*primeira section*/
+
+main{ /*conteudo principal*/
+    width: 100%;
+    height: 100vh;
+    margin-top: 150px;
+}
+
+section#sobre{ /*section filho do conteudo principal*/
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    background-color: #f4f7fa;
+    min-height: 70vh;
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #005f7906;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.203) 0px 6px 2
+ }
+
+ section#sobre >h2{ /*titulo principal da section*/
+    font-family: var(--font2);
+    letter-spacing: -1px;
+    line-height: 1.2;
+    font-weight: bold;
+    font-size: 2em;
+    color: var(--danger);
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-left: 40%; 
+    padding-bottom: 70px;
+ }
+
+ .container{ /*div pai dentro da section*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+    font-size: 1rem;
+    line-height: 1.5;
+ }
+
+ .container >p{ /*paragrafo dentro da div pai*/
+    text-indent: 20px;
+    max-width: 80ch;
+    font-style: normal;
+    font-stretch: normal;
+    font-size: 1.1rem;
+    margin-top: -80px;
+ }
+
+ .topo-site >img{ /*img pessoal esta dentro de uma div*/
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #00000049;
+    height: 250px;
+    width: 250px;
+    margin-left: 60px;
+    margin-top: -200px;
+}
+
+.topo-site img{ /*animação da img pessoal*/
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+} 
+
+@keyframes flutuar{ /*animação de flutuação na foto*/
+    0% {   /*inicio*/
+        top: 0;
+     }
+
+     100%{ /*estado final*/
+        top: 30px;
+     }
+}
+
+section#contato{ /*buttom de contato*/
+    width: 90%;
+}
+
+ span{ /*todo span com sombra, "exeto alguns que foi tirado".*/
+    text-shadow: 1px 1px 2px #0000005e;
+ }
+
+ .rede-sociais{ /*div pai icones*/
+    width: 15%;
+    position: absolute;
+    right: 160px;
+    bottom: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 25px;
+    z-index: 1;
+    font-size: 32px;
+}
+
+.rede-sociais a{ /*links da div pai icones*/
+    text-decoration: none;
+}
+
+.rede-sociais .insta{ /*cor do icone instagram*/
+    color:#c13584;
+}
+
+.rede-sociais .github{ /*cor do icone github*/
+    color:#24292e;
+}
+
+.rede-sociais .linke{ /*cor do icone linkedin*/
+    color:#007bb5;
+}
+
+.rede-sociais .whats{ /*cor do icone whatsapp*/
+    color:#25D366;
+}
+
+.rede-sociais .insta:hover{ /*hover do instagram*/
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.2);
+}
+
+.rede-sociais .github:hover{ /*hover do github*/
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.2);
+}
+
+.rede-sociais .linke:hover{ /*hover do linkedin*/
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.2);
+}
+
+.rede-sociais .whats:hover{ /*hover do whatsapp*/
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.2);
+} 
+
+  /*fim da primeira section*/
+
+  /*segunda section*/
+
+ section#experiencia{ /*segunda section principal*/
+    width: 100%;
+    height: auto;
+    background-color: var(--primary);
+    text-align: center;
+    margin-top: -174px;
+ }
+
+ section >h3{ /*titulo principal da segunda section*/
+    color: var(--danger);
+    font-weight: bold;
+    font-size: 2em;
+    letter-spacing: 3px;
+    font-variant: small-caps;
+    margin: 20px 0px;
+    padding: 15px 0px;
+    text-shadow: 3px 0px 1px var(--dark)
+ }
+
+ section>.resumo{ /*div pai com os paragrafos*/
+    width: calc(100% - 25px); /*ajusta a respansividade*/
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 25px;
+    font-size: 1em;
+    line-height: 1.4em;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 5px;
+ }
+
+ #centralizar-2{ /*div do icon lojas online*/
+    margin-left: 30px;
+ }
+
+ #centralizar-3{ /*div do icon blog prof*/
+    margin-right: 30px;
+ }
+
+ article{ /* article dentro da segunda section*/
+    width: 100%;
+    height: 200px;
+    font-size: 2em;
+    color: var(--light);
+    position: relative;
+ }
+
+ article a{ /*links dentro do article*/
+    text-decoration: none;
+    color: var(--light);
+    display: inline-block;
+    cursor: none;
+    transition: transform .8s; /* Animação */
+ }
+
+ article a:hover{ /*hover dentro do article*/
+    text-decoration: underline;
+    transform: rotate(360deg); /* Rotação */
+ }
+
+ #website{ /*icone website*/
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    transition: all(-50%, -50%);
+    padding: 15px;
+    background-color: var(--dark);
+    border-radius: 8px;
+ }
+
+ #lojas{ /*icone lojas online*/
+    position: absolute;
+    top: 5%;
+    right: 43%;
+    transition: all(-50%, -50%);
+    padding: 15px;
+    background-color: var(--dark);
+    border-radius: 8px;
+ }
+
+ #blog{ /*icone blog prof*/
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    transition: all(-50%, -50%);
+    padding: 15px;
+    background-color: var(--dark);
+    border-radius: 8px;
+ }
+
+ small>p{ /*observação em vermelho da div pai*/
+    text-align: right;
+    margin-top: 15px;
+    padding-bottom: 5px;
+    color: red;
+    font-family: 'Roboto', sans-serif;
+ } 
+ 
+   /*fim da segunda section*/
+
+   /*terceira section*/
+
+ section#projetos{ /*terceira section*/
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:60px auto;
+    background-color: var(--dark);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.667);
+    border: 2px solid var(--warning);
+    border-radius: 2px;
+ }
+
+ section#projetos h2{ /*titulo rpincipal da terceira section*/
+    font-size: 2.2em;
+    color: var(--warning);
+    font-weight: bold;
+    font-variant: small-caps;
+    letter-spacing: 1px;
+    text-shadow: 3px 0px 1px #000000d0;
+    margin-top: -30px;
+    text-align: center;
+ }
+
+ .conjunto{ /*div pai dentro da section*/
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px;
+    margin-top: 70px;
+    position: relative;
+ }
+
+ .projeto1,.projeto2,.projeto3{ /*div filhos dentro dentro da section*/
+    background-attachment: fixed;
+    opacity: 0.8;
+    background: url(imagem/img-projeto.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    object-fit: cover;
+    clip-path: circle(50%);
+    width: 350px;
+    height: 350px;
+    text-align: center;
+    font-size: 2em;
+ }
+
+ .projeto-icon{ /*icone dentro da div filho da section*/
+    color: var(--warning);
+    font-size: 2em;
+    margin-top: 32%;
+    opacity: 0.8;
+ }
+
+ .escondido{ /*links dentro da div filho da section*/
+    text-decoration: none;
+    color: var(--warning);
+    text-shadow: 3px 0px 1px #000000bb;
+    opacity: 0;
+ }
+
+ abbr{ /*abbr quando passar o mouse*/
+    text-decoration: none;
+ }
+
+ .escondido:hover{  /*links hover dentro da div filho da section*/
+    opacity: 1;
+    text-decoration: underline;
+ } 
+ 
+    /*fim da terceira section*/
+
+    /*inicio do footer*/
+
+ footer#contato2{ /*footer*/
+    width: 100%;
+    height: auto;
+    background-color: var(--dark);
+    border: 2px solid var(--success);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.667);
+    padding: 40px 4%;
+    margin: 0 auto;
+ }
+
+ footer fieldset{ /*inicio do formulario "fieldset"*/
+    border: none;
+    width: 60%;
+    text-align: center;
+    padding: 40px;
+    margin: 0 auto;
+ }
+
+form legend{ /*formulario lagend*/
+    font-size: 2em;
+    font-weight: bold;
+    font-variant: small-caps;
+    color: var(--success);
+    text-shadow: 3px 0px 1px #000000bb;
+    margin-top: -50px;
+    margin-bottom: 30px;
+}
+
+form label{ /*formulario label*/
+    font-size: 1.8em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: var(--success);
+    text-shadow: 3px 0px 1px #000000bb;
+    display: block;
+    padding: 4px;
+}
+
+form input{ /*formulario input*/
+    width: 90%;
+    max-width: 450px;
+    min-height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--info);
+    outline: none;
+    transition: all 0.3s ease-out;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #00000024;
+    color: var(--light);
+}
+
+form textarea{ /*formulario textarea*/
+    resize: vertical;
+    overflow: hidden;
+    width: 90%;
+    max-width: 450px;
+    min-height: 120px;
+    border-radius: 4px;
+    border: 2px solid var(--info);
+    outline: none;
+    transition: all 0.3s ease-out;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #00000024;
+    color: var(--light);
+}
+
+form button{ /*formulario button de enviar*/
+    cursor: pointer;
+    position: relative;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    border: 2px solid var(--info);
+    outline: none;
+    transition: all 0.3s ease-in;
+    background-color: transparent;
+    color: var(--success);
+    text-shadow: 3px 0px 1px #000000bb;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+form button:hover{ /*formulario button hover*/
+    transform: translateY(-4px);
+    box-shadow: -1px 6px 15px rgba(0, 0, 0, 0.402), inset 0px
+    1px 0px 0px rgba(255, 255, 255, 0.42);
+    color: black;
+    background-color: var(--info);
+    text-decoration: underline;
+    text-shadow: none;
+    border: none;
+}
+
+footer .baixar{ /*div filho dentro do footer*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px auto;
+    font-size: 1.5em;
+    border-top: 2px solid var(--success);
+    padding-top: 20px;
+    width: 60%;
+    color: var(--success);
+}
+
+footer .baixar >a{ /*div filho dentro do footer*/
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 3px 0px 1px #000000bb;
+}
+
+footer .baixar >a:hover{ /*div filho hover dentro do footer*/
+    color: var(--warning);
+    text-decoration: underline;
+}
+
+footer .baixar >a:active{ /*div filho active dentro do footer*/
+    color: var(--warning);
+    text-decoration: underline;
+}
+
+#github{ /*link do github*/
+    transition: all 0.3s ease-in-out;
+    filter: brightness(90%);
+    font-size: 1.6em;
+    margin: 0 10px;
+}
+
+#linke{ /*link do linkedin*/
+    transition: all 0.3s ease-in-out;
+    filter: brightness(90%);
+    font-size: 1.6em;
+    margin: 0 10px;
+}
+
+#github:hover{ /* link hover github*/
+    color: var(--light);
+}
+
+#linke:hover{ /*link hover do linkedin, "fim do formulario"*/
+   color: var(--light);
+} 
+
+footer >p{ /*paragrafo final do footer*/
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 12px;
+    opacity: 0.75;
+    padding: 0 8%;
+    color: var(--light);
+    background-color: black;
+} 
+
+   /*fim do footer*/
+
+
+/*-------------Tela grande e media--------------------*/
+
+@media screen and (min-width: 2559px) {
+    header{  /*inicio do header*/
+        height: 190px;
+    } 
+
+    li a{
+        font-size: 2.2em;
+    }
+
+    #contato{
+        margin-left: 250px;
+    }
+
+    .menu2{
+        width: 40px;
+        font-size: 2em;
+    }
+
+    li a:hover{
+        transform: scale(1.6);
+        font-size: 2.3em; 
+    } /*fim do header */
+
+    section#sobre{ /*inicio da primeira section*/
+        width: 95%;
+        margin-top: 380px;
+        min-height: 78vh;
+    }
+
+    section#sobre >h2{
+        font-size: 4em;
+        padding-bottom: 90px;
+    }
+
+    .container >p{
+        font-size: 2em;
+        line-height: 2;
+    }
+
+    .topo-site >img{
+        width: 500px;
+        height: 500px;
+        margin-left: 180px;
+        margin-top: -200px;
+    }
+
+    .rede-sociais{
+        right: 170px;
+        bottom: -100px; 
+    }
+
+    .rede-sociais .insta{
+        color:#c13584;
+        font-size: 2em;
+    }
+    
+    .rede-sociais .github{
+        color:#24292e;
+        font-size: 2em;
+    }
+    
+    .rede-sociais .linke{
+        color:#007bb5;
+        font-size: 2em;
+    }
+    
+    .rede-sociais .whats{
+        color:#25D366;
+        font-size: 2em;
+    } /*fim da primeira section*/
+
+    section#experiencia{ /*inicio da segunda section*/
+        text-align: center;
+        text-transform: lowercase;
+     }
+
+    section >h3{ 
+        font-size: 4em;
+        padding: 60px 0px;
+    }
+
+    section>.resumo{
+        font-size: 2em;
+        margin-top: 140px;
+    }
+
+    article a{
+        font-size: 1.6em;
+    }
+
+    #centralizar-1{
+        margin-left: 25px;
+    }
+    #centralizar-2{
+        margin-left: 0px;
+    }
+    #centralizar-3{
+        margin-left: -20px;
+    }
+    
+    #website,#lojas,#blog{
+        padding: 2.2em;  
+    }
+
+     .block, i{
+        font-size: 2em;
+    }
+
+    small>p{
+        font-size: 2em;
+        margin-top: 35px;
+        padding-bottom: 20px;
+     } /*fim da segunda section*/
+
+     section#projeto{ /*inicio da terceira section*/
+        height: auto;
+     }
+
+     section#projetos h2{
+        font-size: 3em;
+        margin-top: 20px;
+     }
+
+     .conjunto{
+        gap: 270px;
+        margin-top: 50px;
+     }
+
+     .projeto1,.projeto2,.projeto3{
+        width: 460px;
+        height: 460px;
+        margin-bottom: 40px;
+     }
+
+     .projeto-icon{
+        margin-top: 30%;
+        font-size: 3em; 
+     }
+
+     footer fieldset{
+        width: 80%;
+        padding: 45px;
+     }
+
+     form legend{
+        font-size: 3em;
+     }
+
+     form label{
+        font-size: 2em;
+     }
+
+     form input{
+        width: 95%;
+        min-width: 600px;
+        min-height: 55px;
+     }
+
+     form textarea{
+        width: 95%;
+        min-width: 600px;
+        min-height: 120px;
+     }
+
+     form button{
+        height: 50px;
+        margin-top: 10px;
+     }
+
+     form button:hover{
+        transform: translateY(-5px);
+     }
+
+     footer .baixar{
+        font-size: 2.1em;
+        width: 65%;
+     }
+
+     
+    #github{
+        font-size: 1.8em;
+    }
+
+    #linke{
+        font-size: 1.8em;
+    }
+
+    footer >p{
+        font-size: 26px;
+        padding: 20px 8%;
+    }
+} /*terminado*/
+
+@media screen and (min-width: 1439px) {
+    section#sobre{
+        min-height: 60vh;
+    }
+
+    .rede-sociais{
+        width: 20%;
+        position: absolute;
+        right: 100px;
+        top: 58%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 5px;
+        z-index: 1;
+        font-size: 38px;
+    }
+
+    #centralizar-2{
+        margin-right: -30px;
+    }
+
+    section#experiencia{
+        height: auto;
+        margin-top: -250px;
+    }
+} /*terminado*/
+
+@media screen and (min-width: 1021px) {
+    #centralizar-2{
+        margin-left: -20px;
+     }
+
+     #centralizar-3{
+        margin-right: 0px;
+     }
+
+     #lojas{
+        right: 41%;
+     }
+} /*terminado*/
+
+@media screen and (max-width: 1024px) { /*abaixo de 1024px "desktop" */
+    section#sobre{
+        width: 100%;
+        min-height: 80vh;
+    }
+
+    div.rede-sociais{
+        width: 1%;
+        right: 140px;
+        bottom: -15px;
+        gap: 24px;
+    }
+
+    section#experiencia{
+         margin-top: -60px;
+    }
+
+    #lojas{
+        right: 40%;
+     }
+
+     #centralizar-3{
+        margin-right: 10px;
+     }
+     #centralizar-2{
+        margin-left: 10px;
+     }
+     #centralizar-1{
+        margin-left: -10px;
+     }
+     small>p{
+        margin-top: 28px;
+        padding-bottom: 8px;
+        color: red;
+        font-family: 'Roboto', sans-serif;
+     } 
+} /*terminado*/
+
+@media screen and (max-width: 1289px) {
+    #centralizar-2{
+        margin-left: -10px;
+    }
+    .conjunto{
+        gap: 50px; 
+    }
+
+    .projeto1,.projeto2,.projeto3{
+        width: 260px;
+        height: 260px;
+
+    }
+
+    .projeto-icon{
+        margin-top: 20%;
+        font-size: 1.6em;
+     }
+
+     section#projetos h2{
+        margin-top: -70px; 
+     }
+} /*terminado correção de um bag respansivo*/
+
+@media screen and (max-width: 916px) {
+    footer .baixar{
+        font-size: 1.1em;
+     }
+} /*terminado correção de um bag respansivo*/
+
+@media screen and (max-width: 904px) {
+    .conjunto{
+        gap: 30px; 
+    }
+
+    .projeto1,.projeto2,.projeto3{
+        width: 240px;
+        height: 240px;
+
+    }
+
+    .projeto-icon{
+        margin-top: 20%;
+     }
+
+     section#projetos h2{
+        font-size: 2.2em;
+        margin-top: -70px;
+     }
+
+     footer .baixar{
+        font-size: 1em;
+     }
+} /*terminado correção de um bag respansivo*/
+
+@media screen and (min-width:1154px) {
+    #centralizar-2{
+        margin-left: 35px;
+    }
+    
+    #centralizar-3{
+        margin-right: 30px;
+    }
+} /*terminado correção de um bag respansivo*/
+
+@media screen and (max-width: 812px) { /*abaixo de 812px "tablet grande"*/
+    header >h1{
+        width: 21px;
+    }
+
+    header img{
+        width: 8%; 
+        position: absolute;  
+        top: 20px;
+        left: 60px;
+    }
+
+    #nav-principal,.lista-primeira a{
+        display: none;
+    }
+
+    ul.nav{
+        position: absolute;
+    }
+    .menu{
+        display: block;
+    }
+
+    #abrir{
+        position: absolute;
+        top: 50%;
+        right: 2%;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        z-index: 999;
+        border-bottom-right-radius: 10px;
+    }
+
+    #abrir:hover{
+        color: var(--danger);
+    }
+
+    #fechar{
+        position: absolute;
+        top: 6.5%;
+        left: 5%;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        z-index: 999;
+        border-bottom-right-radius: 10px;
+    }
+
+    #fechar:hover{
+        color: var(--primary);
+    }
+
+    div.rede-sociais{
+        width: 1%;
+        right: 72%;
+        bottom: -15px;
+        gap: 20px;
+    }
+    .container >p{
+        max-width: 70ch;
+        margin-top: -100px;
+        text-align: justify;
+     }
+    section#sobre >h2{
+        letter-spacing: 1px;
+        line-height: 1.2;
+        margin-top: 20px;
+        margin-left: 48%; 
+        padding-bottom: 90px;
+     }
+     section#experiencia{
+        margin-top: -90px;
+   }
+
+   #lojas{
+       right: 38%;
+    }
+
+    #centralizar-3{
+       margin-right: 0px;
+       padding-right: 2px;
+    }
+    #centralizar-2{
+       margin-left: -8px;
+    }
+    #centralizar-1{
+       margin-left: -20px;
+    }
+    small>p{
+       margin-top: 28px;
+       padding-bottom: 8px;
+       color: red;
+       font-family: 'Roboto', sans-serif;
+    }
+     /*section projeto*/
+    section#projetos{
+        height: auto; 
+    }
+
+    section#projetos h2{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .conjunto{
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    .projeto1,.projeto2,.projeto3{
+        width: 270px;
+        height: 270px;
+        margin-bottom: 20px;
+    }
+
+    footer legend{
+        font-size: 1.8em;
+    }
+
+    footer label{
+        font-size: 1.4em;
+        padding: 3px;
+    }
+
+    footer input{
+        min-width: 450px;
+        max-height: 60px;
+    }
+
+    footer textarea{
+        min-width: 450px;
+        max-height: 120px;
+    }
+
+    .baixar >p{
+        font-size: 1.2em;
+    }
+
+    footer >p{
+        font-size: 1em;
+    }
+} /*terminado*/
+
+@media screen and (max-width:723px) { /*abaixo de 723px "tablet menor"*/
+    div.rede-sociais{
+      right: 68%;
+      bottom: -21%;
+      gap: 18px;
+    }
+    section#experiencia{
+      margin-top: 50px;
+   }
+
+    section#sobre >h2{
+      margin-left: 53%; 
+      font-size: 1.8em;
+ }
+
+    #lojas{
+      right: 36%;
+ }
+
+    #centralizar-3{
+      margin-right: 0px;
+      padding-right: 2px;
+      text-align: center;
+    }
+    #centralizar-2{
+      margin-left: -8px;
+      padding: 0px 2px;
+      text-align: center;
+    }
+    #centralizar-1{
+      margin-left: -20px;
+      text-align: center;
+    }
+} /*terminado*/
+
+@media screen and (max-width:710px) { /*abaixo de 710px "smartfone grande"*/
+    main{
+        margin-top: 130px;
+    }
+
+    section#sobre >h2{
+        font-size: 1.8em;
+        margin: 2% auto;
+    }
+
+    section#sobre {
+       min-height: 95vh;
+    }
+
+    .container{
+        display: inline-block;
+        margin-top: -38px;
+    }
+
+     img.ft-pessoal{
+        margin-bottom: -420px;
+        margin-left: 2px;
+        width: 225px;
+        height: 220px;
+     }
+
+     div.rede-sociais{
+        flex-direction: column;
+        font-size: 28px;
+        right: 8%;
+        bottom: -15%;
+        gap: 5px;
+      }
+
+      section#experiencia{
+        display: inline-block;
+        height: 129vh;
+     }
+
+     section >h3{
+        font-size: 1.8em;
+     }
+
+     section>.resumo{
+        display: block;
+        margin-top: 125px;
+     }
+    article.block{
+        position: relative;
+        margin-top: -80px;
+        padding: 20%;
+        font-size: 28px;
+    }
+
+    #website{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 8px;
+        width: 25%;
+        height: 45%;
+        
+    }
+    #lojas{
+        position: absolute;
+        top: 140%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 8px;
+        width: 25%;
+        height: 45%;
+    }
+    #blog{
+        position: absolute;
+        top: 220%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 8px;
+        width: 25%;
+        height: 45%;
+    }
+
+    small>p{
+        margin-right: 0;
+        margin-top: -2px;
+        padding: 30px;
+     }
+     
+    #centralizar-1{
+        margin-top: -165px;
+        font-size: small;
+    }
+
+    #centralizar-2{
+        margin-top: 179px;
+    }
+
+    #centralizar-3{
+        margin-top: 142px;
+    }
+
+    footer legend{
+        font-size: 1.6em; 
+    }
+
+    form label{
+        font-size: 1em;
+        padding: 3px;
+    }
+
+    form input{
+        min-width: 280px;
+        max-height: 20px;
+    }
+
+    form textarea{
+        min-width: 280px;
+        max-height: 120px;
+    }
+
+} /*terminado*/
+
+/*----------Tela media e pequena-----------*/
+
+@media screen and (max-width: 460px) { /*abaixo de 460px "celulares maoires"*/
+    main{
+        margin-top: 105px;
+    }
+
+    section#sobre{
+        min-height: 115vh; 
+    }
+
+    .topo-site >img{
+        margin-bottom: -600px;
+        width: 250px;
+        height: 250px;
+    }
+
+    .rede-sociais{
+        margin-bottom: -40px;
+    }
+
+    section#experiencia{
+        margin-top: 140px;
+        height: auto;
+    }
+
+    section >h3{
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    section>.resumo{
+       font-size: 0.9em;
+       margin-top: 175px;
+    }
+
+    article a{
+       font-size: 0.9em;
+       margin-top: 6px;
+    }
+
+    #website{
+        top: 60%;
+    }
+
+    #lojas{
+        top: 170%; 
+    }
+
+    #blog{
+        top: 290%; 
+    }
+
+    #centralizar-3{
+        margin-top: 41%;
+        padding-bottom: 5px;
+    }
+
+    small>p{
+        display: none;
+    }
+
+    section#projetos{
+        margin-top: 80px;
+    }
+
+    section#projetos{
+        margin-top: 90px;
+    }
+
+    footer#contato2{
+        margin-top: 90px;
+    }
+
+    form legend{
+        font-size: 1.4em;
+    }
+
+    form button{
+        width: 28%;
+        height: 30px;
+    }
+
+    footer .baixar{
+        width: 100%;
+        font-size: 1em;
+        gap: 10px;
+    }
+
+    footer >p{
+        width: 100%; 
+        line-height: 30px;
+        font-size: 1em;
+    }
+} /*terminado*/
+
+@media screen and (max-width: 426px) { /*abaixo de 426px "smartfone medio"*/
+
+    header img{
+        width: 12%;
+    }
+    section#projetos h2{
+        font-size: 1.5em;
+    }
+
+    section#sobre >h2{
+        font-size: 1.5em;
+    }
+
+    .container{
+        padding: 30px 5px;
+        font-size: normal;
+        line-height: 1.2;
+    }
+
+    .container >p{
+        font-size: 1em;
+    }
+
+    .topo-site >img{
+        height: 200px;
+        width: 200px;
+        margin-left: -20px;
+        margin-top: -200px;
+    }
+
+    .rede-sociais{
+        gap: 5px;
+        font-size: 26px;
+        width: 11%;
+    }
+
+    section#experiencia{ /*segunda section*/
+        height: 82ch;
+    }
+
+    section >h3{
+        font-size: 1.5em;
+        margin-bottom: 50px;
+    }
+
+    section>.resumo{
+        line-height: 1.2em;
+        margin-top: 185px;
+        font-size: small;
+    }
+
+    article{
+        height: 150px;
+    }
+
+    article a{
+        font-size: 18px;
+    }
+
+    #lojas{
+        top: 180%;
+    }
+
+    #blog{
+        top: 300%;
+    }
+
+    small >p{
+        display: none;
+    }/*final da segunda section*/
+
+    .conjunto{
+        gap: 10px;
+        margin-top: 50px;
+    }
+
+    .projeto1,.projeto2,.projeto3{
+        clip-path: circle(80%);
+        width: 300px;
+        height: 200px;
+        border: 1px solid var(--warning);
+        border-radius: 10px;
+        background-attachment: inherit;
+        background-color: black;
+        background: url(imagem/fundo-projeto-cell.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+
+    .projeto-icon{
+        font-size: 1.6em;
+        margin-top: 11%
+    }
+
+    .escondido{
+        font-size: 0.8em;
+    }
+
+    form button{
+        font-size: 11px;
+        height: 30px;
+        width: 85px;
+    }
+
+    footer legend{
+        font-size: 1.2em;
+    }
+
+    footer .baixar{
+        gap: 5px;
+        font-size: 1em;
+        width: 85%;
+    }
+
+    footer >p{
+        font-size: small;
+        line-height: 20px;
+        letter-spacing: 1px;
+        padding: 5px;
+    }
+} /*terminado*/
+
+@media screen and (max-width: 376px) { /*abaixo de 376px "smartfone pequeno"*/
+    section#sobre{
+        min-height: 120vh; 
+    }
+
+    .topo-site >img{
+        margin-bottom: -495px;
+        margin-left: 2%;
+        width: 260px;
+        height: 260px;
+    }
+
+    .rede-sociais{
+        width: 5%;
+        margin-bottom: -90px;
+    }
+
+    .insta,.github,.linke,.whats{
+        gap: 2px;
+        font-size: 25px;
+    }
+
+    section >h3{
+        font-size: 1.4em;
+        padding: 20px 0px;
+    }
+
+    article a{
+        margin-top: 2px;
+    }
+    
+    #website{
+        width: 100px;
+        height: 100px;
+        border-radius: 10%;
+        padding-top: 20px;
+        font-size: 1em;
+    }
+
+    #lojas{
+        width: 100px;
+        height: 100px;
+        border-radius: 10%;
+        padding-top: 25px;
+        font-size: 1em;
+        top: 290px;
+    }
+
+    #blog{
+        width: 100px;
+        height: 100px;
+        border-radius: 10%;
+        padding-top: 20px;
+        font-size: 1em;
+        top: 500px;
+    }
+
+    section#projetos h2{
+        font-size: 1.3em;
+    }
+
+    .escondido{
+        font-size: 0.8em;
+    }
+
+    form button{
+        height: 30px;
+        width: 70px; 
+        font-size: small;
+    }
+    
+    footer .baixar{
+        width: 100%;
+    }
+} /*terminado*/
+
+@media screen and (max-width: 321px) { /*abaixo de 321 px "smarte fone super pequeno"*/
+    section#sobre{
+        min-height: 102vh;
+    }
+
+    section#sobre >h2{
+        font-size: 1.3em;
+        margin-bottom: 10px;
+    }
+
+    .container{
+        line-height: 1.2;
+        padding: 1px;
+    }
+
+    .container >p{
+        margin-top: -70px;
+        font-size: 0.9em;
+        text-align: justify;
+        width: 100%;
+        line-height: normal;
+    }
+
+    .topo-site >img{
+        width: 180px;
+        height: 180px;
+        margin-bottom: -510px;
+    }
+
+    .rede-sociais{
+        top: 105vh;
+    }
+
+    .insta,.github,.linke,.whats{
+        gap: 2px;
+        font-size: 0.8em;
+    }
+
+    section >h3{
+        font-size: 1.2em;
+        margin-bottom: 70px;
+    }
+
+    .conjunto{
+        gap: 2px;
+        margin-top: 30px;
+    }
+
+    .projeto1,.projeto2,.projeto3{
+        width: 250px;
+        height: 150px;
+    }
+
+    .projeto-icon{
+        font-size: 1.3em;
+    }
+
+    .escondido{
+        font-size: 0.6em;
+    }
+    
+    form legend{
+        font-size: 1.1em;
+    }
+
+    footer label{
+        font-size: small;
+        padding: 0;
+    }
+
+    footer input{
+       min-width: 220px;
+       min-height: 30px;
+    }
+
+    footer textarea{
+        min-width: 220px;
+        min-height: 30px;
+    }
+
+    form button{
+        font-size: small;
+    }
+
+    .baixar p{
+        font-weight: normal;
+        font-size: 1em;
+    }
+
+    footer .baixar{
+        width: 100%;
+        font-size: 1em;
+        margin: 30px auto;
+        gap: 1px;
+    }
+
+    footer >p{
+        font-size: 0.1em;
+        margin-top: 10px;
+    }
+} /*terminado*/
+
