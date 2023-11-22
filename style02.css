@@ -478,7 +478,7 @@ section#contato{ /*buttom de contato*/
     text-decoration: none;
     color: var(--warning);
     text-shadow: 3px 0px 1px #000000bb;
-    opacity: 0;
+    opacity: 1;
  }
 
  abbr{ /*abbr quando passar o mouse*/
@@ -486,7 +486,7 @@ section#contato{ /*buttom de contato*/
  }
 
  .escondido:hover{  /*links hover dentro da div filho da section*/
-    opacity: 1;
+    opacity: .9;
     text-decoration: underline;
  } 
  
