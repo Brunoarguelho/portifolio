@@ -8,7 +8,7 @@ let btnFechar = document.getElementById('btn-fechar')
 
      if(Menu.style.width == '0%' || Menu.style.opacity == 0){
     Menu.style.transition = "all .5s ease"
-    Menu.style.width = '53%'
+    Menu.style.width = '80%'
     Menu.style.opacity = 1
     }
 
@@ -22,7 +22,7 @@ else {
 btnFechar.addEventListener('click', ()=>{  // Botão para fechar o menu lateral
 if(Menu.style.width == '0%'){
     Menu.style.transition = "all .5s ease"
-    Menu.style.width = '53%'
+    Menu.style.width = '80%'
     Menu.style.opacity = 1
     }
 else {
