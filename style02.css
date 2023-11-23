@@ -775,7 +775,7 @@ footer >p{ /*paragrafo final do footer*/
     }
 
     section#experiencia{
-        height: 46vh;
+        height: 45vh;
     }
 
     section#experiencia .sub-titulo{
@@ -786,7 +786,7 @@ footer >p{ /*paragrafo final do footer*/
     section#experiencia .outros .website .icon{
         position: absolute;
         top: 3%;
-        left: 15%;
+        left: 17%;
     } 
     
     section#experiencia .outros .loja .icon{
@@ -798,12 +798,12 @@ footer >p{ /*paragrafo final do footer*/
     section#experiencia .outros .blog .icon{
         position: absolute;
         top: 3%;
-        left: 85%;
+        left: 83%;
     } 
 
     section#experiencia .outros .icon{
         font-size: 3em;
-        padding: 4% 10.5%;
+        padding: 4% 9%;
     }
 
     section#experiencia .outros a{
@@ -815,8 +815,8 @@ footer >p{ /*paragrafo final do footer*/
         margin-top: -30px;
         padding: 8px 13px;
         font-size: .5em;
-        margin-right: 2px;
-        opacity: 1;
+        margin-right: 1px;
+        opacity: 0;
     }
 
     section#projetos{
