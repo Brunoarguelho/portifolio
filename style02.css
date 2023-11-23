@@ -816,7 +816,7 @@ footer >p{ /*paragrafo final do footer*/
         padding: 8px 13px;
         font-size: .5em;
         margin-right: 1px;
-        opacity: 0;
+        opacity: 1;
     }
 
     section#projetos{
