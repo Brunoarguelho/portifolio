@@ -1,11 +1,5 @@
  @charset "UTF-8";
 
- @font-face { /*muito chamativo*/
-    font-family: 'destaque';
-    src: url(fonts/Nabla-Regular.ttf) format('truetype');
-    font-weight: normal;
- }
-
  @font-face { /*font usar no titulo do sobre*/
     font-family: 'Logo';
     src: url(fonts/FANTASY\ MAGIST.otf) format('opentype');
@@ -47,16 +41,11 @@ header{/*header em estado fixo*/
     background-color: var(--primary);
     box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.317);
     color: white;
-    height: 100px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
+    height: 120px;
 }
 
 header img{ /*img da logo*/
-    width: 5%;
+    width: 6.5%;
     filter: drop-shadow(2px 2px 5px #5f5f5f);
     border-radius: 10px;
 }
@@ -75,7 +64,7 @@ ul{ /*lsita não ordenada*/
 
 li a{ /*as lista junto com links*/
     padding: 10px;
-    font-size: 1.2em;
+    font-size: 1.3em;
     text-decoration: none;
     color: inherit;
     transition: .3s ease-in-out;
@@ -83,9 +72,8 @@ li a{ /*as lista junto com links*/
 }
 
 li a:hover{ /*links hover*/
-    transform: scale(1.5);
+    font-size: 1.4em;
     text-decoration: underline;
-    font-size: 1.3em; 
 }
 
 ul .menu2:hover{ /*cor do icone de abrir a barra lareral*/
@@ -118,18 +106,6 @@ ul .menu2:hover{ /*cor do icone de abrir a barra lareral*/
     width: 0%;
     overflow: hidden;
 }
-
-.overlay{ /*shadow do menu lateral*/
-    background-color: #000000bb;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    transition: all 0.5s ease-in-out;
-    z-index: 8888;
-    display: none;
-} /*não esta aparecendo overlay*/
 
 .menu-mobile .nav-lateral #nav-lateral-ul{ /*nav ul li do menu lateral*/
     display: block;
@@ -183,69 +159,69 @@ btn-fechar >#fechar{ /*buttom fechar da barra lateral*/
 
 /*primeira section*/
 
-main{ /*conteudo principal*/
+section#sobre{
     width: 100%;
-    height: 100vh;
-    margin-top: 150px;
+    height: 70ch;
+    position: relative;
 }
 
-section#sobre{ /*section filho do conteudo principal*/
-    width: 90%;
-    margin: auto;
-    text-align: center;
-    background-color: #f4f7fa;
-    min-height: 70vh;
+section#sobre .container{
+    width: 100%;
+    margin-bottom: 10px;
     padding: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background-color: #005f7906;
-    border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.203) 0px 6px 2
- }
-
- section#sobre >h2{ /*titulo principal da section*/
-    font-family: var(--font2);
-    letter-spacing: -1px;
-    line-height: 1.2;
-    font-weight: bold;
-    font-size: 2em;
-    color: var(--danger);
-    text-transform: uppercase;
-    margin-top: 40px;
-    margin-left: 40%; 
-    padding-bottom: 70px;
- }
-
- .container{ /*div pai dentro da section*/
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
     align-items: center;
-    gap: 40px;
-    padding: 20px;
-    font-size: 1rem;
-    line-height: 1.5;
- }
-
- .container >p{ /*paragrafo dentro da div pai*/
-    text-indent: 20px;
-    max-width: 80ch;
-    font-style: normal;
-    font-stretch: normal;
-    font-size: 1.1rem;
-    margin-top: -80px;
- }
-
- .topo-site >img{ /*img pessoal esta dentro de uma div*/
-    object-fit: cover;
-    border-radius: 50%;
-    border: 1px solid #00000049;
-    height: 250px;
-    width: 250px;
-    margin-left: 60px;
-    margin-top: -200px;
 }
 
-.topo-site img{ /*animação da img pessoal*/
+section#sobre .titulo{
+    font-size: 2.2em;
+    font-family: var(--font2);
+    color: var(--danger);
+    text-align: center;
+    margin-left: 380px;
+    padding-top: 5px;
+}
+
+section#sobre .texto{
+    width: 60%;
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 1.6em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+span.laranja{
+    color: #ffa500;
+    font-weight: bold;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.466)
+}
+
+span.azul{
+    color: #000080;
+    font-weight: bold;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.466)
+}
+
+span.universal{
+    text-decoration: underline;
+}
+
+span.amarelo{
+    color: #ffff00;
+    font-weight: bold;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.466)
+}
+
+.img-sobre img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.img-sobre img{ /*animação da img pessoal*/
     position: relative;
     animation: flutuar 2s ease-in-out infinite alternate;
 } 
@@ -260,29 +236,15 @@ section#sobre{ /*section filho do conteudo principal*/
      }
 }
 
-section#contato{ /*buttom de contato*/
-    width: 90%;
-}
-
- span{ /*todo span com sombra, "exeto alguns que foi tirado".*/
-    text-shadow: 1px 1px 2px #0000005e;
- }
-
- .rede-sociais{ /*div pai icones*/
-    width: 15%;
+.rede-sociais{ /*div pai icones*/
     position: absolute;
-    right: 160px;
-    bottom: 80px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 25px;
-    z-index: 1;
-    font-size: 32px;
+    right: 100px;
+    font-size: 2.5em;
 }
 
 .rede-sociais a{ /*links da div pai icones*/
     text-decoration: none;
+    margin-right: 20px;
 }
 
 .rede-sociais .insta{ /*cor do icone instagram*/
@@ -319,116 +281,120 @@ section#contato{ /*buttom de contato*/
 .rede-sociais .whats:hover{ /*hover do whatsapp*/
     transition: all 0.3s ease-in-out;
     transform: scale(1.2);
+} /*fim da primeira section*/
+
+/*segunda section*/
+section#experiencia{
+   width: 100%;
+   height: 50vh;
+   background-color: var(--primary);
+   margin-bottom: 30px;
+   box-shadow: 0 0 4px rgba(0, 0, 0, 0.308);
+}
+
+section#experiencia .container2{
+   position: relative;
+}
+
+section#experiencia .sub-titulo{
+    text-align: center;
+    font-size: 2.1em;
+    font-weight: bold;
+    color: var(--danger);
+    font-variant: small-caps;
+    text-shadow: 1px 2px #00000087;
+    padding: 10px 0;
+    margin-bottom: 160px;
+}
+
+section#experiencia .outros{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+}
+
+section#experiencia .outros .website .icon{
+    position: absolute;
+    top: -53%;
+    left: 21.5%;
+    transform: translate(-50%, -50%);
 } 
 
-  /*fim da primeira section*/
+section#experiencia .outros .loja .icon{
+    position: absolute;
+    top: -53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} 
 
-  /*segunda section*/
+section#experiencia .outros .blog .icon{
+    position: absolute;
+    top: -53%;
+    left: 78%;
+    transform: translate(-50%, -50%);
+} 
 
- section#experiencia{ /*segunda section principal*/
-    width: 100%;
-    height: auto;
-    background-color: var(--primary);
-    text-align: center;
-    margin-top: -174px;
- }
-
- section >h3{ /*titulo principal da segunda section*/
+section#experiencia .outros .icon{
+    font-size: 4em;
     color: var(--danger);
-    font-weight: bold;
-    font-size: 2em;
-    letter-spacing: 3px;
-    font-variant: small-caps;
-    margin: 20px 0px;
-    padding: 15px 0px;
-    text-shadow: 3px 0px 1px var(--dark)
- }
+    background-color: var(--dark);
+    padding: 2.3% 5%;
+    border-radius: 5px;
+}
 
- section>.resumo{ /*div pai com os paragrafos*/
-    width: calc(100% - 25px); /*ajusta a respansividade*/
-    text-align: left;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-left: 25px;
-    font-size: 1em;
-    line-height: 1.4em;
-    text-align: center;
-    font-weight: bold;
-    padding-bottom: 5px;
- }
-
- #centralizar-2{ /*div do icon lojas online*/
-    margin-left: 30px;
- }
-
- #centralizar-3{ /*div do icon blog prof*/
-    margin-right: 30px;
- }
-
- article{ /* article dentro da segunda section*/
-    width: 100%;
-    height: 200px;
-    font-size: 2em;
-    color: var(--light);
-    position: relative;
- }
-
- article a{ /*links dentro do article*/
+section#experiencia .outros a{
+    font-size: 1.8em;
     text-decoration: none;
     color: var(--light);
-    display: inline-block;
-    cursor: none;
-    transition: transform .8s; /* Animação */
+    transition: all 0.6s ease-in-out;
+    margin-top: 10px;
+}
+
+section#experiencia .outros a:hover{
+    transform: rotate(360deg);
+}
+
+section#experiencia .outros .website{
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr 1fr;
+   text-align: center;
+}
+
+section#experiencia .outros .loja{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+}
+
+section#experiencia .outros .blog{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
  }
 
- article a:hover{ /*hover dentro do article*/
-    text-decoration: underline;
-    transform: rotate(360deg); /* Rotação */
+ section#experiencia .outros .text-invisivel{
+    opacity: 0;
+    background-color: #24292ed7;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: var(--light);
+    margin-top: -10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    transition: all 0.6s ease-in-out;
  }
 
- #website{ /*icone website*/
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    transition: all(-50%, -50%);
-    padding: 15px;
-    background-color: var(--dark);
-    border-radius: 8px;
+ section#experiencia .outros a:hover ~.text-invisivel{
+    opacity: 1;
  }
+/*fim da segunda section*/
 
- #lojas{ /*icone lojas online*/
-    position: absolute;
-    top: 5%;
-    right: 43%;
-    transition: all(-50%, -50%);
-    padding: 15px;
-    background-color: var(--dark);
-    border-radius: 8px;
- }
-
- #blog{ /*icone blog prof*/
-    position: absolute;
-    top: 5%;
-    right: 5%;
-    transition: all(-50%, -50%);
-    padding: 15px;
-    background-color: var(--dark);
-    border-radius: 8px;
- }
-
- small>p{ /*observação em vermelho da div pai*/
-    text-align: right;
-    margin-top: 15px;
-    padding-bottom: 5px;
-    color: red;
-    font-family: 'Roboto', sans-serif;
- } 
- 
-   /*fim da segunda section*/
-
-   /*terceira section*/
+/*terceira section*/
 
  section#projetos{ /*terceira section*/
     width: 100%;
@@ -436,7 +402,7 @@ section#contato{ /*buttom de contato*/
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 60px auto;
+    margin: 30px auto;
     background-color: var(--dark);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.667);
     border: 2px solid var(--warning);
@@ -520,7 +486,7 @@ section#contato{ /*buttom de contato*/
 
  footer fieldset{ /*inicio do formulario "fieldset"*/
     border: none;
-    width: 60%;
+    width: 80%;
     text-align: center;
     padding: 40px;
     margin: 0 auto;
@@ -548,7 +514,7 @@ form label{ /*formulario label*/
 
 form input{ /*formulario input*/
     width: 90%;
-    max-width: 450px;
+    max-width: 550px;
     min-height: 40px;
     border-radius: 5px;
     border: 2px solid var(--info);
@@ -564,7 +530,7 @@ form textarea{ /*formulario textarea*/
     resize: vertical;
     overflow: hidden;
     width: 90%;
-    max-width: 450px;
+    max-width: 550px;
     min-height: 120px;
     border-radius: 4px;
     border: 2px solid var(--info);
@@ -658,820 +624,19 @@ footer .baixar >a:active{ /*div filho active dentro do footer*/
 footer >p{ /*paragrafo final do footer*/
     width: 100%;
     text-align: center;
-    line-height: 40px;
+    line-height: 60px;
     letter-spacing: 1px;
     font-family: 'Roboto', sans-serif;
     font-style: italic;
     font-weight: lighter;
-    font-size: 12px;
+    font-size: 20px;
     opacity: 0.75;
     padding: 0 8%;
     color: var(--light);
     background-color: black;
 } 
+ /*fim do footer*/
 
-   /*fim do footer*/
+/*----------------------------media screen--------------------*/
 
-
-/*-------------Tela grande e media--------------------*/
-
-@media screen and (min-width: 2559px) {
-    header{  /*inicio do header*/
-        height: 190px;
-    } 
-
-    li a{
-        font-size: 2.2em;
-    }
-
-    #contato{
-        margin-left: 250px;
-    }
-
-    .menu2{
-        width: 40px;
-        font-size: 2em;
-    }
-
-    li a:hover{
-        transform: scale(1.6);
-        font-size: 2.3em; 
-    } /*fim do header */
-
-    section#sobre{ /*inicio da primeira section*/
-        width: 95%;
-        margin-top: 380px;
-        min-height: 78vh;
-    }
-
-    section#sobre >h2{
-        font-size: 4em;
-        padding-bottom: 90px;
-    }
-
-    .container >p{
-        font-size: 2em;
-        line-height: 2;
-    }
-
-    .topo-site >img{
-        width: 500px;
-        height: 500px;
-        margin-left: 180px;
-        margin-top: -200px;
-    }
-
-    .rede-sociais{
-        right: 170px;
-        bottom: -100px; 
-    }
-
-    .rede-sociais .insta{
-        color:#c13584;
-        font-size: 2em;
-    }
-    
-    .rede-sociais .github{
-        color:#24292e;
-        font-size: 2em;
-    }
-    
-    .rede-sociais .linke{
-        color:#007bb5;
-        font-size: 2em;
-    }
-    
-    .rede-sociais .whats{
-        color:#25D366;
-        font-size: 2em;
-    } /*fim da primeira section*/
-
-    section#experiencia{ /*inicio da segunda section*/
-        text-align: center;
-        text-transform: lowercase;
-     }
-
-    section >h3{ 
-        font-size: 4em;
-        padding: 60px 0px;
-    }
-
-    section>.resumo{
-        font-size: 2em;
-        margin-top: 140px;
-    }
-
-    article a{
-        font-size: 1.6em;
-    }
-
-    #centralizar-1{
-        margin-left: 25px;
-    }
-    #centralizar-2{
-        margin-left: 0px;
-    }
-    #centralizar-3{
-        margin-left: -20px;
-    }
-    
-    #website,#lojas,#blog{
-        padding: 2.2em;  
-    }
-
-     .block, i{
-        font-size: 2em;
-    }
-
-    small>p{
-        font-size: 2em;
-        margin-top: 35px;
-        padding-bottom: 20px;
-     } /*fim da segunda section*/
-
-     section#projeto{ /*inicio da terceira section*/
-        height: auto;
-     }
-
-     section#projetos h2{
-        font-size: 3em;
-        margin-top: 20px;
-     }
-
-     .conjunto{
-        gap: 270px;
-        margin-top: 50px;
-     }
-
-     .projeto1,.projeto2,.projeto3{
-        width: 460px;
-        height: 460px;
-        margin-bottom: 40px;
-     }
-
-     .projeto-icon{
-        margin-top: 30%;
-        font-size: 3em; 
-     }
-
-     footer fieldset{
-        width: 80%;
-        padding: 45px;
-     }
-
-     form legend{
-        font-size: 3em;
-     }
-
-     form label{
-        font-size: 2em;
-     }
-
-     form input{
-        width: 95%;
-        min-width: 600px;
-        min-height: 55px;
-     }
-
-     form textarea{
-        width: 95%;
-        min-width: 600px;
-        min-height: 120px;
-     }
-
-     form button{
-        height: 50px;
-        margin-top: 10px;
-     }
-
-     form button:hover{
-        transform: translateY(-5px);
-     }
-
-     footer .baixar{
-        font-size: 2.1em;
-        width: 65%;
-     }
-
-     
-    #github{
-        font-size: 1.8em;
-    }
-
-    #linke{
-        font-size: 1.8em;
-    }
-
-    footer >p{
-        font-size: 26px;
-        padding: 20px 8%;
-    }
-} /*terminado*/
-
-@media screen and (min-width: 1439px) {
-    section#sobre{
-        min-height: 60vh;
-    }
-
-    .rede-sociais{
-        width: 20%;
-        position: absolute;
-        right: 100px;
-        top: 58%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        gap: 5px;
-        z-index: 1;
-        font-size: 38px;
-    }
-
-    #centralizar-2{
-        margin-right: -30px;
-    }
-
-    section#experiencia{
-        height: auto;
-        margin-top: -250px;
-    }
-} /*terminado*/
-
-@media screen and (min-width: 1021px) {
-    #centralizar-2{
-        margin-left: -20px;
-     }
-
-     #centralizar-3{
-        margin-right: 0px;
-     }
-
-     #lojas{
-        right: 41%;
-     }
-} /*terminado*/
-
-@media screen and (max-width: 1024px) { /*abaixo de 1024px "desktop" */
-    section#sobre{
-        width: 100%;
-        min-height: 80vh;
-    }
-
-    div.rede-sociais{
-        width: 1%;
-        right: 140px;
-        bottom: -15px;
-        gap: 24px;
-    }
-
-    section#experiencia{
-         margin-top: -60px;
-    }
-
-    #lojas{
-        right: 40%;
-     }
-
-     #centralizar-3{
-        margin-right: 10px;
-     }
-     #centralizar-2{
-        margin-left: 10px;
-     }
-     #centralizar-1{
-        margin-left: -10px;
-     }
-     small>p{
-        margin-top: 28px;
-        padding-bottom: 8px;
-        color: red;
-        font-family: 'Roboto', sans-serif;
-     } 
-} /*terminado*/
-
-@media screen and (max-width: 1289px) {
-    #centralizar-2{
-        margin-left: -10px;
-    }
-    .conjunto{
-        gap: 50px; 
-    }
-
-    .projeto1,.projeto2,.projeto3{
-        width: 260px;
-        height: 260px;
-
-    }
-
-    .projeto-icon{
-        margin-top: 20%;
-        font-size: 1.6em;
-     }
-
-     section#projetos h2{
-        margin-top: -70px; 
-     }
-} /*terminado correção de um bag respansivo*/
-
-@media screen and (max-width: 916px) {
-    footer .baixar{
-        font-size: 1.1em;
-     }
-} /*terminado correção de um bag respansivo*/
-
-@media screen and (max-width: 904px) {
-    .conjunto{
-        gap: 30px; 
-    }
-
-    .projeto1,.projeto2,.projeto3{
-        width: 240px;
-        height: 240px;
-
-    }
-
-    .projeto-icon{
-        margin-top: 20%;
-     }
-
-     section#projetos h2{
-        font-size: 2.2em;
-        margin-top: -70px;
-     }
-
-     footer .baixar{
-        font-size: 1em;
-     }
-} /*terminado correção de um bag respansivo*/
-
-@media screen and (min-width:1154px) {
-    #centralizar-2{
-        margin-left: 35px;
-    }
-    
-    #centralizar-3{
-        margin-right: 30px;
-    }
-} /*terminado correção de um bag respansivo*/
-
-@media screen and (max-width: 812px) { /*abaixo de 812px "tablet grande"*/
-    header >h1{
-        width: 21px;
-    }
-
-    header img{
-        width: 8%; 
-        position: absolute;  
-        top: 20px;
-        left: 60px;
-    }
-
-    #nav-principal,.lista-primeira a{
-        display: none;
-    }
-
-    ul.nav{
-        position: absolute;
-    }
-    .menu{
-        display: block;
-    }
-
-    #abrir{
-        position: absolute;
-        top: 50%;
-        right: 2%;
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-        z-index: 999;
-        border-bottom-right-radius: 10px;
-    }
-
-    #abrir:hover{
-        color: var(--danger);
-    }
-
-    #fechar{
-        position: absolute;
-        top: 6.5%;
-        left: 5%;
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-        z-index: 999;
-        border-bottom-right-radius: 10px;
-    }
-
-    #fechar:hover{
-        color: var(--primary);
-    }
-
-    .img-lateral{
-        display: none;
-    }
-
-    div.rede-sociais{
-        width: 1%;
-        right: 72%;
-        bottom: -15px;
-        gap: 20px;
-    }
-    .container >p{
-        max-width: 70ch;
-        margin-top: -100px;
-        text-align: justify;
-     }
-    section#sobre >h2{
-        letter-spacing: 1px;
-        line-height: 1.2;
-        margin-top: 20px;
-        margin-left: 48%; 
-        padding-bottom: 90px;
-     }
-     section#experiencia{
-        margin-top: -90px;
-   }
-
-   #lojas{
-       right: 38%;
-    }
-
-    #centralizar-3{
-       margin-right: 0px;
-       padding-right: 2px;
-    }
-    #centralizar-2{
-       margin-left: -8px;
-    }
-    #centralizar-1{
-       margin-left: -20px;
-    }
-    small>p{
-       margin-top: 28px;
-       padding-bottom: 8px;
-       color: red;
-       font-family: 'Roboto', sans-serif;
-    }
-     /*section projeto*/
-    section#projetos{
-        height: auto; 
-    }
-
-    section#projetos h2{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    .conjunto{
-        flex-direction: column; 
-        gap: 20px;
-    }
-
-    .projeto1,.projeto2,.projeto3{
-        width: 270px;
-        height: 270px;
-        margin-bottom: 20px;
-    }
-
-    footer legend{
-        font-size: 1.8em;
-    }
-
-    footer label{
-        font-size: 1.4em;
-        padding: 3px;
-    }
-
-    footer input{
-        min-width: 450px;
-        max-height: 60px;
-    }
-
-    footer textarea{
-        min-width: 450px;
-        max-height: 120px;
-    }
-
-    .baixar >p{
-        font-size: 1.2em;
-    }
-
-    footer >p{
-        font-size: 1em;
-    }
-} /*terminado*/
-
-@media screen and (max-width:723px) { /*abaixo de 723px "tablet menor"*/
-    div.rede-sociais{
-      right: 68%;
-      bottom: -21%;
-      gap: 18px;
-    }
-    section#experiencia{
-      margin-top: 50px;
-   }
-
-    section#sobre >h2{
-      margin-left: 53%; 
-      font-size: 1.8em;
- }
-
-    #lojas{
-      right: 36%;
- }
-
-    #centralizar-3{
-      margin-right: 0px;
-      padding-right: 2px;
-      text-align: center;
-    }
-    #centralizar-2{
-      margin-left: -8px;
-      padding: 0px 2px;
-      text-align: center;
-    }
-    #centralizar-1{
-      margin-left: -20px;
-      text-align: center;
-    }
-} /*terminado*/
-
-@media screen and (max-width:710px) { /*abaixo de 710px "smartfone grande"*/
-    main{
-        margin-top: 130px;
-    }
-
-    section#sobre >h2{
-        font-size: 1.8em;
-        margin: 2% auto;
-    }
-
-    section#sobre {
-       min-height: 95vh;
-    }
-
-    .container{
-        display: inline-block;
-        margin-top: -38px;
-    }
-
-     img.ft-pessoal{
-        margin-bottom: -420px;
-        margin-left: 2px;
-        width: 225px;
-        height: 220px;
-     }
-
-     div.rede-sociais{
-        flex-direction: column;
-        font-size: 28px;
-        right: 8%;
-        bottom: -15%;
-        gap: 5px;
-      }
-
-      section#experiencia{
-        display: inline-block;
-        height: 129vh;
-     }
-
-     section >h3{
-        font-size: 1.8em;
-     }
-
-     section>.resumo{
-        display: block;
-        margin-top: 125px;
-     }
-    article.block{
-        position: relative;
-        margin-top: -80px;
-        padding: 20%;
-        font-size: 28px;
-    }
-
-    #website{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 8px;
-        width: 25%;
-        height: 45%;
-        
-    }
-    #lojas{
-        position: absolute;
-        top: 140%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 8px;
-        width: 25%;
-        height: 45%;
-    }
-    #blog{
-        position: absolute;
-        top: 220%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 8px;
-        width: 25%;
-        height: 45%;
-    }
-
-    small>p{
-        margin-right: 0;
-        margin-top: -2px;
-        padding: 30px;
-     }
-     
-    #centralizar-1{
-        margin-top: -165px;
-        font-size: small;
-    }
-
-    #centralizar-2{
-        margin-top: 179px;
-    }
-
-    #centralizar-3{
-        margin-top: 142px;
-    }
-
-    footer legend{
-        font-size: 1.6em; 
-    }
-
-    form label{
-        font-size: 1em;
-        padding: 3px;
-    }
-
-    form input{
-        min-width: 280px;
-        max-height: 20px;
-    }
-
-    form textarea{
-        min-width: 280px;
-        max-height: 120px;
-    }
-
-} /*terminado*/
-
-/*----------Tela media e pequena-----------*/
-
-@media screen and (max-width: 460px) { /*abaixo de 460px "celulares maoires"*/
-    header img{
-        width: 14%;
-        margin-top: 5px;
-    }
-
-    .menu-mobile .nav-lateral #nav-lateral-ul{ /*nav ul li do menu lateral*/
-        text-align: center;
-        font-size: 1.1em;
-        line-height: 100px;
-    }
-
-    .img-lateral{
-        display: block;
-    }
-
-    main{
-        width: 100%;
-        margin-top: 120px;
-    }
-
-    section#sobre{
-        width: 100%;
-        min-height: 70vh; 
-        padding: 0;
-        background-color: transparent;
-    }
-
-    section#sobre >h2{
-        font-size: 1.6em;
-        line-height: .1em;
-        margin-bottom: -50px;
-        margin-top: 125px;
-    }
-
-    .container >p{
-        font-size: 1.1em;   
-        margin-top: -10px;
-    }
-
-    .topo-site >img{
-        display: none;
-    }
-
-    .rede-sociais{
-        margin-bottom: -90px;
-    }
-
-    .rede-sociais .insta{
-        color:#c13584;
-        font-size: 40px;
-    }
-    
-    .rede-sociais .github{ 
-        color:#24292e;
-        font-size: 40px;
-    }
-    
-    .rede-sociais .linke{ 
-        color:#007bb5;
-        font-size: 40px;
-    }
-    
-    .rede-sociais .whats{ 
-        color:#25D366;
-        font-size: 40px;
-    }
-    
-    section#experiencia{
-        margin-top: 102px;
-        height: 650px;
-    }
-
-    #website{
-        top: 60%;
-    }
-
-    section >h3{
-        margin-bottom: 20px;
-    }
-
-    section>.resumo{
-       display: none;
-    }
-
-    article{
-        margin-top: 20px;
-    }
-
-    article a{
-       width: 100%;
-       height: 100%;
-       font-size: 1.1em;
-       white-space: nowrap;
-       text-align: center;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-    }
-
-    small>p{
-       display: none;
-    }
-
-    section#projetos{
-        margin-top: 50px;
-        font-size: 1.2em;
-    }
-
-    footer#contato2{
-        margin-top: 50px;
-    }
-
-    footer fieldset{
-        width: 80%;
-        margin: 0 auto;
-    }
-
-    form{
-        width: 100%;
-        margin-left: -10px;
-    }
-
-    form legend{
-        font-size: 1.4em;
-    }
-
-    form button{
-        width: 28%;
-        height: 30px;
-    }
-
-    footer .baixar{
-        width: 100%;
-        font-size: .9em;
-        gap: 5px;
-        white-space: nowrap;
-    }
-
-    #github{
-        margin: 0 5px
-    }
-
-    #linke{
-        margin: 0 5px
-    }
-
-    footer >p{
-        width: 100%; 
-        line-height: 25px;
-        padding: 0 1%;
-    }
-} /*terminado*/
 

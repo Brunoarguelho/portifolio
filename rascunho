@@ -1,344 +1,72 @@
 
-    <header>
-        <h1>Logo</h1>
-        <nav class="menu">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">Negocios</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-       <h1>Isso é um teste</h1>
-       <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nisi officiis mollitia accusamus,
-            nesciunt reiciendis reprehenderit, quod iusto a vitae iure atque saepe! Sit maiores fugit, 
-            saepe autem totam quasi. Commodi blanditiis iste minima laborum sapiente at rem sequi tempore
-            eius provident hic nesciunt dolore labore voluptate, doloremque dolorum ab excepturi sed soluta
-            repudiandae. Culpa corrupti nostrum modi sint esse.Mollitia atque incidunt eveniet unde sequi. 
-            Odit suscipit voluptates ab. Libero ipsa officiis minima voluptatum velit sed obcaecati nostrum 
-            perferendis ex expedita. Facilis, maiores animi. Illo, ab odit! Quod, laboriosam!Expedita,
-            aperiam! Mollitia, a autem? Consectetur maiores repellat eaque quisquam aliquam eius delectus
-            saepe iste earum perspiciatis? Veritatis, id numquam suscipit harum blanditiis quasi quas, cum
-            rerum nulla accusamus quo? Delectus, provident! Earum minima, cupiditate architecto, a veniam
-            minus quasi aut dicta perferendis odio nihil sit modi eos porro natus necessitatibus 
-            assumenda facilis sapiente eveniet optio? Repellat repudiandae deleniti in! Iure inventore
-            pariatur, optio voluptatem, ipsa sunt natus nam voluptate voluptates dignissimos placeat
-            totam quisquam officiis consectetur commodi qui error ab in tempore saepe hic eum. At, a. 
-            Dolores, velit? Cupiditate dolores accusamus sit odit sunt nulla reprehenderit illum harum
-            sapiente voluptatem, vel deserunt officia explicabo mollitia nemo nihil! Doloribus minus
-            tempore quae temporibus sapiente unde necessitatibus dolore dignissimos incidunt?
-            Cum, eos amet, maxime quam fugiat repudiandae nobis dignissimos veritatis hic omnis, laborum
-            commodi necessitatibus. Expedita sit molestias, sapiente perspiciatis ullam, harum a, autem sed
-            recusandae iure deleniti blanditiis alias? Minima cupiditate doloremque voluptatibus ab vitae 
-            quis aperiam beatae fuga accusantium assumenda, sequi cum explicabo nemo, reiciendis pariatur
-            iure aliquid maxime debitis, dignissimos repudiandae eveniet non numquam est. Hic, laborum.
-            Nostrum quibusdam, autem totam vel rem iste eos ullam, earum cum praesentium doloribus fugit 
-            temporibus nulla illum aut facere unde quaerat possimus sed incidunt ducimus excepturi 
-            reprehenderit harum? Necessitatibus, dolor.
-       </p>
-    </main>
-    <section>
-        <article>
-            <h2>conteúdo</h2>
-            <h2>conteúdo</h2>
-        </article>
-    </section>
-    <section>
-        <aside>
-            <h2>conteúdo</h2>
-            <h2>conteúdo</h2>
-        </aside>
-    </section>
-    <footer>
-        <p>2021 - Todos os direitos reservados</p>
-    </footer>
-/---------------------/
-    <section id="experiencia">
-        <h3>Minhas Especialidades</h3>
-        <article>
-                <div id="website">
-                    <ion-icon name="earth-outline" style="color: #f5365c; font-size: 2.4em;"></ion-icon>
-                    <p><a href="#">WebSite</a></p>
-                </div>
-                <div id="lojas">
-                    <ion-icon name="cart-outline" style="color: #f5365c; font-size: 2.4em;"></ion-icon>
-                    <p><a href="#">Lojas online</a></p>
-                </div>
-                <div id="blog">
-                    <ion-icon name="logo-wordpress" style="color: #f5365c; font-size: 2.4em;"></ion-icon>
-                    <p><a href="#">Blog prof</a></p>
-                </div>
-        </article>
-       <div class="resumo">
-           <p>
-            WebSite profissionais <br>
-            feito com Todas as tecnologias <br>
-            por front-End.
-           </p>
-           <p id="centralizar">
-            Loja Online Feita com <br>
-            Todas as Tecnologias <br>
-            Por Front-end e Back-end.
-           </p>
-           <p id="centralizar-blog">
-            Blog Profissional<br>
-            Criado com Wordpress <br>
-            E todos os plugins necessários.
-           </p>
-       </div>
-       <small><p>Obs:Tópico de Especialidades em Constância Mudança.</p></small> 
-    </section>
 
-    section#experiencia{
-        width: 100%;
-        height: auto;
-        background-color: var(--primary);
-        text-align: center;
-        margin-top: -174px;
-     }
-    
-     section >h3{
-        color: var(--danger);
-        font-weight: bold;
-        font-size: 2em;
-        letter-spacing: 3px;
-        font-variant: small-caps;
-        margin: 20px 0px;
-        padding: 15px 0px;
-        text-shadow: 3px 0px 1px var(--dark)
-     }
-    
-     section>.resumo{
-        width: calc(100% - 25px); /*ajusta a respansividade*/
-        text-align: left;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-left: 25px;
-        font-size: 1em;
-        line-height: 1.4em;
-        text-align: center;
-        font-weight: bold;
-        padding-bottom: 5px;
-     }
-    
-     #centralizar{
-        margin-left: 30px;
-     }
-    
-     #centralizar-blog{
-        margin-right: 30px;
-     }
-    
-     article{
-        width: 100%;
-        height: 200px;
-        font-size: 2em;
-        color: var(--light);
-        position: relative;
-     }
-    
-     article a{
-        text-decoration: none;
-        color: var(--light);
-        display: inline-block;
-        transition: transform .6s; /* Animação */
-     }
-    
-     article a:hover{
-        text-decoration: underline;
-        transform: rotate(360deg); /* Rotação */
-     }
-    
-     #website{
-        position: absolute;
-        top: 5%;
-        left: 5%;
-        transition: all(-50%, -50%);
-        padding: 15px;
-        background-color: var(--dark);
-        border-radius: 8px;
-     }
-    
-     #lojas{
-        position: absolute;
-        top: 5%;
-        right: 43%;
-        transition: all(-50%, -50%);
-        padding: 15px;
-        background-color: var(--dark);
-        border-radius: 8px;
-     }
-    
-    
-     #blog{
-        position: absolute;
-        top: 5%;
-        right: 5%;
-        transition: all(-50%, -50%);
-        padding: 15px;
-        background-color: var(--dark);
-        border-radius: 8px;
-     }
-    
-     small>p{
-        text-align: right;
-        margin-top: 15px;
-        padding-bottom: 5px;
-        color: red;
-        font-family: 'Roboto', sans-serif;
-     } 
+<section id="sobre">
+    <h2 class="titulo">Olá! Eu sou o Bruno!</h2>
+    <div class="container">
+        <div class="topo-site">
+            <img class="ft-pessoal" src="imagem/img-sobre.jpg" alt="Foto de Bruno">
+            <div class="rede-sociais">
+                <a href="https://www.instagram.com/bruno.arguelho.7/" target="_blank">
+                    <ion-icon name="logo-instagram" class="insta"></ion-icon>
+                </a>
+                <a href="https://wa.me/+5532991635824?text=Ol%C3%A1%2C%20Tudo%20bem!" target="_blank">
+                    <ion-icon name="logo-whatsapp" class="whats"></ion-icon>
+                </a>
+                <a href="https://github.com/Brunoarguelho" target="_blank">
+                    <ion-icon name="logo-github" class="github"></ion-icon>
+                </a>
+                <a href="https://www.linkedin.com/in/bruno-a-flauzino-37b7a2178/" target="_blank">
+                    <ion-icon name="logo-linkedin" class="linke"></ion-icon>
+                </a>
+            </div>
+        </div>
+            <p> Desenvolvedor Júnior Front End, em Busca do seu primeiro Emprego na área!
+                tenho Amplo conhecimento em <span style="color: #ff9100;">HTML5</span>, <span style="color: blue;">CSS3</span> e
+                <span style="color: #d1b505;">JAVASCRIPT</span>.  
+                Atualmente estou estudando <span style="text-decoration: underline; text-shadow: none;">
+                C#, .Net Framework e ReactJS,</span> para me tornar um Full Stack Developer!
+                Apaixonado por aprender novas linguagens e tecnologias para me tornar um profissional completo.
+                Meu objetivo é aprender novas habilidades e tecnologias, resolver problemas 
+                complexos e criar soluções criativas e eficientes para os meus clientes. 
+                Sou um profissional dedicado, curioso e colaborativo, que gosta de trabalhar 
+                em equipe e compartilhar ideias. Estou sempre buscando me aperfeiçoar e me 
+                atualizar sobre as tendências e novidades do mercado de desenvolvimento.
+                <br><br>
+            </p>
+    </div>
+</section> <!--primeira section-->
 
-     segunda section
-    
-    /*********************************/
-
-    *{
-    margin: auto;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    background-color:#f2f4f8;
-    font-family:'Roboto', sans-serif;
-    width: 100%;
-    height: 100vh;
-}
-
-header{
-    background-color:#3498db;
-    font-size:1.1em;
-    height: 100px;
-    display: flex;
-    justify-content: space-around;    
-    flex-wrap: wrap;
-    align-items: center; 
-}
-
-header >h1{
-    color: white;
-}
-
-nav{
-    float: left;
-}
-
-nav >ul{
-    /* width: 100%; */
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-}
-
- nav >li,a{
-    color: white;
-    text-decoration: none;
-}
-
-main{
-    max-width: 75rem;
-    min-height: calc(100vh - 200px);
-    margin:auto;
-    padding: 2rem;
-    background-color: #e6e4e49b;
-    /* overflow: scroll; */
-}
-
-main >h1{
-    color: rgb(27, 43, 167);
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-bottom: 15px;
-    font-size: 2em;
-}
-
-main >p{
-    line-height: 1.4;
-    text-indent: 20px;
-    text-align: justify;
-    padding: 10px;
-}
-
-section{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    grid-gap: 10px;
-    align-items: start;
-    padding: 10px;
-    background-color: #3498db;
-    height: 30vh;
-    margin: 5px 0px;
-}
-
-article{
-    display: flex;
-    flex-wrap: wrap;
-    border: solid black;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: 100%;
-    height: auto;
-    border-radius: .25em;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px, rgba(0, 0, 0, 0.1) 0 1px 2px;
-    padding: 5px;
-}
-
-aside{
-    display: flex;
-    flex-wrap: wrap;
-    border: solid black;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: 100%;
-    height: auto;
-    border-radius: .25em;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px, rgba(0, 0, 0, 0.1) 0 1px 2px;
-    padding: 5px;
-}
-
-footer{
-    background-color: #3498db;
-    color: white;
-    text-align: center;
-    font-size: 1.5em;
-    line-height: 60px;
-    margin-top: 20px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-}
-
-
-/*----------- java script------------*/
-
- if(Menu.style.width == '0%' || Menu.style.opacity == 0){
-    Menu.style.transition = "all .5s ease"
-    Menu.style.width = '53%'
-    Menu.style.opacity = 1
-    }
-
-else {
-    Menu.style.transition = "all .5s ease"
-    Menu.style.width = '0%'
-    Menu.style.opacity = 0
-    }
-
-btnFechar.addEventListener('click', ()=>{  // Botão para fechar o menu lateral
-if(Menu.style.width == '0%'){
-    Menu.style.transition = "all .5s ease"
-    Menu.style.width = '53%'
-    Menu.style.opacity = 1
-    }
-else {
-    Menu.style.transition = "all .5s ease"
-    Menu.style.width = '0%'
-    Menu.style.opacity = 0
-    }
+<h3>Minhas Especialidades</h3>
+<article class="block">
+        <div id="website">
+            <ion-icon name="earth-outline" style="color: #f5365c; font-size: 2.4em;"></ion-icon>
+            <p><a href="#C2">WebSite</a></p>
+        </div>
+        <div id="lojas">
+            <ion-icon name="cart-outline" style="color: #f5365c; font-size: 2.4em;"></ion-icon>
+            <p><a href="#C2">Lojas Online</a></p>
+        </div>
+        <div id="blog">
+            <ion-icon name="logo-wordpress" style="color: #f5365c; font-size: 2.4em;"></ion-icon>
+            <p><a href="#C2">Blog Prof</a></p>
+        </div>
+</article>
+<div class="resumo">
+   <p id="centralizar-1">
+    WebSite profissionais <br>
+    feito com Todas as tecnologias <br>
+    por front-End.
+   </p>
+   <p id="centralizar-2">
+    Loja Online Feita com <br>
+    Todas as Tecnologias <br>
+    Por Front-end e Back-end.
+   </p>
+   <p id="centralizar-3">
+    Blog Profissional<br>
+    Criado com Wordpress <br>
+    E todos os plugins necessários.
+   </p>
+</div>
+<small><p>Obs:Tópico de Especialidades em Constância Mudança.</p></small> 
+</section> <!--segunda section-->
