@@ -134,7 +134,7 @@ ul .menu2:hover{ /*cor do icone de abrir a barra lareral*/
 .menu-mobile .nav-lateral #nav-lateral-ul{ /*nav ul li do menu lateral*/
     display: block;
     visibility: visible;
-    text-align: right;
+    text-align: center;
     font-size: 2em;
     line-height: 105px;
     opacity: 1;
@@ -1066,6 +1066,10 @@ footer >p{ /*paragrafo final do footer*/
         color: var(--primary);
     }
 
+    .img-lateral{
+        display: none;
+    }
+
     div.rede-sociais{
         width: 1%;
         right: 72%;
@@ -1327,6 +1331,10 @@ footer >p{ /*paragrafo final do footer*/
         text-align: center;
         font-size: 1.1em;
         line-height: 100px;
+    }
+
+    .img-lateral{
+        display: block;
     }
 
     main{
