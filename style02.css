@@ -89,6 +89,10 @@ ul .menu2:hover{ /*cor do icone de abrir a barra lareral*/
 
 .menu{ /*icone menu invisivel até tamanho certo*/
     display: none;
+    position: absolute;
+    top: 6%;
+    right: 2%;
+    font-size: 2.2em;
 }
 
 .menu2{ /*icones do lado de cada link do cabeçalho*/
@@ -99,7 +103,7 @@ ul .menu2:hover{ /*cor do icone de abrir a barra lareral*/
 .menu-lateral{ /*estilo do menu-lateral*/
     background-color: #000000f1;
     height: 100vh;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     z-index: 9999;
@@ -111,11 +115,12 @@ ul .menu2:hover{ /*cor do icone de abrir a barra lareral*/
     display: block;
     visibility: visible;
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5em;
     line-height: 105px;
     opacity: 1;
     margin-top: 50px;
     margin-right: 15px;
+    color: var(--light);
 }
 
 .menu-mobile .nav-lateral #nav-lateral-ul a:hover{ /*nav ul li do menu lateral hover*/
@@ -129,14 +134,6 @@ ul .menu2:hover{ /*cor do icone de abrir a barra lareral*/
     color: white;
 }
 
-.menu-lateral.abrir-menu{ /*codigo de clik não usavel*/
-    width: 53%;
-}
-
-.menu-lateral.abrir-menu ~ .overlay{ /*bug arrumar */
-    display: block;
-}
-
 .img-lateral{
     width: 200px;
     height: 200px;
@@ -144,15 +141,17 @@ ul .menu2:hover{ /*cor do icone de abrir a barra lareral*/
     margin-top: 20px;
     box-shadow: 0 0 4px #ffffff48;
     margin: 0 auto;
-    margin-left: 40px;
     background: url(imagem/img-sobre.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-btn-fechar >#fechar{ /*buttom fechar da barra lateral*/
-    position: relative;
+#btn-fechar >#fechar{ /*buttom fechar da barra lateral*/
+    position: absolute;
+    top: 6%;
+    left: 10px;
+
 } /*fim do estilo menu-lateral*/
 
 /*fim do header*/
@@ -470,9 +469,9 @@ section#experiencia .outros .blog{
     text-decoration: underline;
  } 
  
-    /*fim da terceira section*/
+/*fim da terceira section*/
 
-    /*inicio do footer*/
+ /*inicio do footer*/
 
  footer#contato2{ /*footer*/
     width: 100%;
@@ -639,4 +638,258 @@ footer >p{ /*paragrafo final do footer*/
 
 /*----------------------------media screen--------------------*/
 
+@media screen and (max-width: 1268px) {
+    .conjunto{
+        gap: 50px;
+    }
 
+    .projeto1,.projeto2,.projeto3{
+        width: 280px;
+        height: 280px;
+    }
+
+    .projeto-icon{
+        font-size: 1.8em;
+        margin-top: 28%;
+    }
+}
+
+@media screen and (max-width: 964px) {
+    section#experiencia .outros .website .icon{
+        position: absolute;
+        top: -53%;
+        left: 19%;
+        transform: translate(-50%, -50%);
+    } 
+    
+    section#experiencia .outros .loja .icon{
+        position: absolute;
+        top: -53%;
+        left: 49%;
+        transform: translate(-50%, -50%);
+    } 
+    
+    section#experiencia .outros .blog .icon{
+        position: absolute;
+        top: -53%;
+        left: 80%;
+        transform: translate(-50%, -50%);
+    } 
+
+    .conjunto{
+        gap: 30px;
+    }
+
+    .projeto1,.projeto2,.projeto3{
+        width: 220px;
+        height: 220px;
+    }
+
+    .projeto-icon{
+        font-size: 1.6em;
+        margin-top: 18%;
+    }
+
+    .escondido{
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    ul a.primeira-lista, .menu2{
+        display: none;
+    }
+
+    .menu{
+        display: block;
+    }
+
+    .img-sobre img{
+        width: 250px;
+        height: 250px;
+    }
+
+    section#sobre{
+        height: 60ch;
+    }
+
+    section#sobre .titulo{
+        font-size: 2em;
+        margin-left: 300px;
+    }
+
+    section#sobre .texto{
+        font-size: 1em;
+        line-height: 1.4em;
+    }
+
+    footer .baixar{
+        width: 100%;
+        font-size: 1.4em;
+    }
+
+    footer >p{
+        font-size: 1.1em;
+        line-height: 40px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    header img{
+        width: 17%;
+    }
+
+    .menu-mobile .nav-lateral #nav-lateral-ul{
+        font-size: 1.2em;
+    }
+
+    section#sobre{
+        height: 60ch;
+    }
+
+    section#sobre .container{
+        flex-direction: column;
+    }
+
+    section#sobre .titulo{
+        margin-left: 0;
+        font-size: 1.8em;
+    }
+
+    section#sobre .texto{
+        width: 100%;
+        font-size: 1em;
+        line-height: 1.4em;
+        text-align: justify;
+        text-indent: 20px;
+        padding: 0 1%;
+    }
+
+    .img-sobre img{
+        display: none;
+    }
+
+    .rede-sociais{
+        right: 50px;
+        font-size: 2em;
+    }
+
+    section#experiencia{
+        height: 46vh;
+    }
+
+    section#experiencia .sub-titulo{
+        font-size: 1.6em;
+        margin-bottom: 60px;
+    }
+
+    section#experiencia .outros .website .icon{
+        position: absolute;
+        top: 3%;
+        left: 15%;
+    } 
+    
+    section#experiencia .outros .loja .icon{
+        position: absolute;
+        top: 3%;
+        left: 50%;
+    } 
+    
+    section#experiencia .outros .blog .icon{
+        position: absolute;
+        top: 3%;
+        left: 85%;
+    } 
+
+    section#experiencia .outros .icon{
+        font-size: 3em;
+        padding: 4% 10.5%;
+    }
+
+    section#experiencia .outros a{
+        font-size: 1em;
+        margin-top: 50px;
+    }
+
+    section#experiencia .outros .text-invisivel{
+        margin-top: -30px;
+        padding: 8px 13px;
+        font-size: .5em;
+        margin-right: 2px;
+        opacity: 1;
+    }
+
+    section#projetos{
+        margin: -20px auto;
+        width: 100%;
+        height: 125vh;
+    }
+
+    section#projetos h2{
+        font-size: 1.8em;
+    }
+
+    .projeto1,.projeto2,.projeto3{
+        font-size: 1.5em;
+    }
+
+    .projeto-icon{
+        margin-top: 29%; 
+    }
+
+    footer#contato2{
+        margin: 30px auto 0 auto;
+    }
+
+    footer fieldset{
+        width: 100%;
+    }
+
+    form legend{
+        font-size: 1.5em;
+        white-space: nowrap;
+        margin-left: -20px;
+    }
+
+    form label{
+        font-size: 1.3em;
+        padding: 2px;
+    }
+
+    form input{
+        width: 100%;
+        height: 30px; 
+        padding: 0;
+    }
+
+    form textarea{
+        width: 100%;
+    }
+
+    form button{
+        height: 35px;
+        width: 80px;
+    }
+
+    footer .baixar{
+        width: 100%;
+        font-size: 1em;
+        gap: 5px;
+        white-space: nowrap;
+    }
+
+    #github{
+        margin: 0 5px;
+    }
+
+    #linke{
+        margin: 0 5px;
+    }
+
+    footer >p{
+        width: 100%;
+        padding: 0;
+        line-height: 20px;
+        font-size: 10px;
+    }
+}
