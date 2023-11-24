@@ -102,7 +102,7 @@ ul .menu2:hover{ /*cor do icone de abrir a barra lareral*/
 
 .menu-lateral{ /*estilo do menu-lateral*/
     background-color: #000000f1;
-    height: 100vh;
+    height: 334vh;
     position: absolute;
     top: 0;
     right: 0;
@@ -149,7 +149,7 @@ ul .menu2:hover{ /*cor do icone de abrir a barra lareral*/
 
 #btn-fechar >#fechar{ /*buttom fechar da barra lateral*/
     position: absolute;
-    top: 6%;
+    top: 1.5%;
     left: 10px;
 
 } /*fim do estilo menu-lateral*/
