@@ -1,6 +1,6 @@
 
 
-<section id="sobre">
+<!--<section id="sobre">
     <h2 class="titulo">Olá! Eu sou o Bruno!</h2>
     <div class="container">
         <div class="topo-site">
@@ -36,7 +36,7 @@
     </div>
 </section> <!--primeira section-->
 
-<h3>Minhas Especialidades</h3>
+<!--<h3>Minhas Especialidades</h3>
 <article class="block">
         <div id="website">
             <ion-icon name="earth-outline" style="color: #f5365c; font-size: 2.4em;"></ion-icon>
