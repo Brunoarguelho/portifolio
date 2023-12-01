@@ -468,7 +468,28 @@ section#experiencia .outros .blog{
     opacity: .9;
     text-decoration: underline;
  } 
- 
+
+ div.tab{
+    width: 100%;
+    position: relative;
+ }
+
+ div.tab span{
+    position: absolute;
+    right: 43.5%;
+    top: 40px;
+    cursor: pointer;
+    font-size: 22px;
+ }
+
+ div.tab a{
+    text-decoration: none;
+    color: var(--warning);
+    text-shadow: 3px 0px 1px #000000bb;
+    font-family: var(--font2);
+    letter-spacing: 3px;
+ }
+
 /*fim da terceira section*/
 
  /*inicio do footer*/
@@ -652,6 +673,10 @@ footer >p{ /*paragrafo final do footer*/
         font-size: 1.8em;
         margin-top: 28%;
     }
+
+    div.tab span{
+        right: 40%;
+     }
 }
 
 @media screen and (max-width: 964px) {
@@ -693,6 +718,10 @@ footer >p{ /*paragrafo final do footer*/
     .escondido{
         font-size: 1em;
     }
+
+    div.tab span{
+        right: 37.5%;
+     }
 }
 
 @media screen and (max-width: 860px) {
@@ -898,4 +927,10 @@ footer >p{ /*paragrafo final do footer*/
         line-height: 20px;
         font-size: 10px;
     }
+
+    div.tab span{
+        right: 29%;
+        top: 40px;
+        font-size: 20px;
+     }
 }
