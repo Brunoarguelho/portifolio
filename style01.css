@@ -477,7 +477,7 @@ section#experiencia .outros .blog{
  div.tab span{
     position: absolute;
     right: 43.5%;
-    top: 40px;
+    top: 5px;
     cursor: pointer;
     font-size: 22px;
  }
@@ -675,7 +675,8 @@ footer >p{ /*paragrafo final do footer*/
     }
 
     div.tab span{
-        right: 40%;
+        right: 41%;
+        top: 30px;
      }
 }
 
