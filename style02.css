@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 @font-face { /*não usavel*/
     font-family: 'projeto';
     src: url(fonts/Ancient\ Ad.ttf) format('truetype');
@@ -233,4 +232,72 @@ section h2{
 }
 
 /*-----------------------------*/
-/*falta colocar projetos prontos visivel nas div*/
+/*efeitos site pronto*/
+
+.img-port{
+    width: 100%;
+    height: 300px;
+    background-image: url(imagem/img-apple.jpeg);
+    background-size: cover;
+    background-position: 100% 0%;
+    cursor: pointer;
+    transition: 8s;
+    position: relative;
+}
+
+.img-port:hover{
+    background-position: 100% 100%;
+    filter: brightness(90%);
+}
+
+.img-port a{
+    text-decoration: none;
+    color: beige;
+    background-color: #333;
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    font-weight: normal;
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%); /*IE 9*/
+    transform: translateX(-50%) translateY(-50%); 
+    opacity: 1; /*1*/
+    transition: all 1s ease-in;
+    padding-top: 140px;
+}
+
+.img-port a:hover{
+    opacity: 0;
+    transition: all .1s ease-in;
+}
+
+.img-port img{
+    position: absolute;
+    bottom: 23%;
+    left: 43%;
+    -ms-transform: translateX(-50%); 
+    transform: translateX(-50%);
+    opacity: 1;
+    animation: toque 0.5s linear infinite;
+}
+
+.img-port img:hover{
+    opacity: 0;
+}
+
+@keyframes toque {
+    0% { 
+        transform: scale(1);
+     }
+    50% { 
+        transform: scale(0.95); 
+    }
+    100% {
+         transform: scale(1); 
+        }
+  }
+
+  /*------------media screen-------------*/
