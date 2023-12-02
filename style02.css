@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 
-@font-face {
+@font-face { /*não usavel*/
     font-family: 'projeto';
     src: url(fonts/Ancient\ Ad.ttf) format('truetype');
 }
@@ -42,7 +42,7 @@ header h1{
     font-family: 'Courier New', Courier, monospace;
     font-size: 3em;
     line-height: 1.5em;
-    animation: aparecer 8s 2 linear;
+    animation: aparecer 8s 1 linear;
 }
 
 @keyframes aparecer{
@@ -61,7 +61,7 @@ header p{
     font-size: 1.1em;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 1px;
-    animation: flutuar 5s 3 linear;
+    animation: flutuar 5s 2 linear;
 }
 
 @keyframes flutuar{
@@ -115,4 +115,122 @@ section h2{
     background-color: #333;
     border: 5px solid #0000003d;
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.faixa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: rings 5s linear;
+}
+
+.faixa >P{
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    color: beige;
+    animation: fixo  10s 1 linear;
+    opacity: 1;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.faixa >P:hover{
+    transform: scale(1.4);
+}
+
+@keyframes fixo{
+    0% {
+        transform: rotateZ(-4deg) translateX(0);
+        opacity: 0;
+    }
+    50% {
+        transform: rotateZ(4deg) translateY(0);
+        opacity: 0;
+    }
+    100% {
+        transform: rotateZ(-4deg) translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rings {
+    0%{
+        transform: rotate(0deg);
+        box-shadow: 1px 5px 2px orange;
+    }
+    50%{
+        transform: rotate(180deg);
+        box-shadow: -1px 5px 2px orangered;
+    }
+    100%{
+        transform: rotate(360deg);
+        box-shadow: 1px 5px 2px white;
+    }
+}
+
+/*parte do balão*/
+
+.tooltip {
+   position: relative;
+}
+
+.tooltip .tooltext {
+    visibility: hidden;
+    width: 120px;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 55%; 
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1.1s ease-in;
+}
+
+.tooltip:hover .tooltext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.flutbalao {
+    animation-name: float;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+.rodar {
+    animation-name: rodar;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rodar{
+    0%{
+        transform:rotate(0)
+    }
+    100%{
+        transform:rotate(360deg)
+    }
+}
+
+@keyframes float {
+    0% { 
+        transform: translateY(0px);
+     }
+    50% { 
+        transform: translateY(-10px); 
+    }
+    100% { 
+        transform: translateY(0px);
+    }
+}
+
+/*-----------------------------*/
+/*falta colocar projetos prontos visivel nas div*/
