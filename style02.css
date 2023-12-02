@@ -299,5 +299,44 @@ section h2{
          transform: scale(1); 
         }
   }
-
+  
   /*------------media screen-------------*/
+  @media screen and (max-width: 460px) { /*cell*/
+    header h1{
+        font-size: 1.8em;
+    }
+
+    header p{
+        font-size: 0.5em;
+        letter-spacing: 0px;
+    }
+
+    main p#rodape{
+        font-size: small;
+    }
+
+    section h2{
+        font-size: 2em;
+    }
+
+    .proj-front, .proj-back{
+        grid-template-columns: 1fr;
+        padding: 0 1%;
+    }
+
+    .elemento{
+        height: 400px;
+    }
+
+    .img-port{
+        height: 400px;
+    }
+
+    .img-port a{
+        padding-top: 180px;  
+    }
+
+    .img-port img{
+        bottom: 32%;
+    }
+  }
