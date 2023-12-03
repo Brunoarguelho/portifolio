@@ -805,8 +805,8 @@ footer >p{ /*paragrafo final do footer*/
 
     .rede-sociais{
         top: 90%;
-        right: 55px;
-        font-size: 2.5em;
+        right: 10px;
+        font-size: 3em;
     }
 
     section#experiencia{
@@ -896,10 +896,12 @@ footer >p{ /*paragrafo final do footer*/
         width: 100%;
         height: 30px; 
         padding: 0;
+        margin-left: -7px;
     }
 
     form textarea{
         width: 100%;
+        margin-left: -7px;
     }
 
     form button{
@@ -930,8 +932,8 @@ footer >p{ /*paragrafo final do footer*/
     }
 
     div.tab span{
-        right: 29%;
-        top: 40px;
-        font-size: 20px;
+        right: 25%;
+        top: 30px;
+        font-size: 1.5em;
      }
 }
