@@ -298,7 +298,7 @@ section h2{
     100% {
          transform: scale(1); 
         }
-  }
+}
 
 /*------------------------*/
 
@@ -367,6 +367,76 @@ section h2{
          transform: scale(1); 
         }
 }
+
+/*----------------------------*/
+
+.img-port-calc{ /*projeto calculadora*/
+    width: 100%;
+    height: 300px;
+    background-image: url(imagem/img-calculadora.jpeg);
+    background-size: cover;
+    background-position: left center;
+    cursor: pointer;
+    transition: 8s;
+    position: relative;
+}
+
+.img-port-calc:hover{
+    background-position: 100% 100%;
+    filter: brightness(90%);
+}
+
+.img-port-calc a{
+    text-decoration: none;
+    color: beige;
+    background-color: #333;
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    font-weight: normal;
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%); /*IE 9*/
+    transform: translateX(-50%) translateY(-50%); 
+    opacity: 1; /*1*/
+    transition: all 1s ease-in;
+    padding-top: 140px;
+}
+
+.img-port-calc a:hover{
+    opacity: 0;
+    transition: all .1s ease-in;
+}
+
+.img-port-calc img{
+    position: absolute;
+    bottom: 23%;
+    left: 43%;
+    -ms-transform: translateX(-50%); 
+    transform: translateX(-50%);
+    opacity: 1;
+    animation: toque 0.5s linear infinite;
+}
+
+.img-port-calc img:hover{
+    opacity: 0;
+}
+
+@keyframes toque {
+    0% { 
+        transform: scale(1);
+     }
+    50% { 
+        transform: scale(0.95); 
+    }
+    100% {
+         transform: scale(1); 
+    }
+}
+/*-------------------------------*/
+
 
 /*------------media screen-------------*/
   @media screen and (max-width: 460px) { /*cell*/
